@@ -1,11 +1,13 @@
 package com.eumji.clock.alarm
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.PopupMenu
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.eumji.clock.R
 import com.eumji.clock.VerticalItemDecorator
@@ -13,7 +15,7 @@ import com.google.android.material.appbar.AppBarLayout
 import java.lang.IllegalStateException
 import java.lang.Math.abs
 
-class Alarm : Fragment() {
+class Alarm : Fragment(), View.OnClickListener {
     private lateinit var alarmRecyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,22 +29,28 @@ class Alarm : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_alarm, container, false)
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_alarm, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val alarmTextView: TextView = view.findViewById(R.id.alarm_appbar_title)
+
+        val alarmAppBarPlusButton: ImageButton = view.findViewById(R.id.alarm_appbar_plus)
+        val alarmAppBarMenuButton: ImageButton= view.findViewById(R.id.alarm_appbar_menu)
+        alarmAppBarPlusButton.setOnClickListener(this)
+        alarmAppBarMenuButton.setOnClickListener(this)
+
+        val alarmAppBarTitle: TextView = view.findViewById(R.id.alarm_appbar_title)
         val appBarLayout: AppBarLayout = view.findViewById(R.id.alarm_appbar)
+
         appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener{_, verticalOffset ->
             appBarLayout.post{
                 try{
                     if(abs(verticalOffset)>= appBarLayout.totalScrollRange){
-                        alarmTextView.text="알람"
+                        alarmAppBarTitle.text="알람"
                     }
                     else{
-                        alarmTextView.text=" "
+                        alarmAppBarTitle.text=" "
                     }
                 } catch (ex: IllegalStateException){
                     println(ex.localizedMessage)
@@ -54,10 +62,54 @@ class Alarm : Fragment() {
         for(i in 1..13){
             list.add(AlarmItem(i))
         }
+
         alarmRecyclerView = view.findViewById(R.id.alarm_recyclerview)
         alarmRecyclerView.adapter = AlarmRecyclerAdapter(list)
         alarmRecyclerView.addItemDecoration(VerticalItemDecorator(20))
+    }
 
+    override fun onClick(v: View){
+        when (v.id) {
+            R.id.alarm_appbar_plus->{
+                var intent= Intent(activity, AlarmCreate::class.java)
+                startActivity(intent)
+            }
+            R.id.alarm_appbar_menu->{
+                popupAlarmMenu(v)
+            }
+        }
+    }
+
+    private fun popupAlarmMenu(v: View){
+        val wrapper = ContextThemeWrapper(activity, R.style.BasePopupMenu)
+        val popupMenu= PopupMenu(wrapper,  v)
+        popupMenu.menuInflater.inflate(R.menu.alarm_menu,popupMenu.menu)
+        popupMenu.show()
+        popupMenu.setOnMenuItemClickListener { item ->
+            when(item.itemId){
+                R.id.alarm_menu_sleep_setting -> {
+                    Toast.makeText(activity, "click on sleep setting", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.alarm_menu_edit ->{
+                    Toast.makeText(activity, "click on edit", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.alarm_menu_sort ->{
+                    Toast.makeText(activity, "click on sort", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.alarm_menu_setting ->{
+                    Toast.makeText(activity, "click on setting", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.alarm_menu_question ->{
+                    Toast.makeText(activity, "click on question", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+            }
+            return@setOnMenuItemClickListener false
+        }
     }
 
     companion object {

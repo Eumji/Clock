@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BasePopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/border_popup</item>
+        <item name="android:textColor">@color/font </item>
+        <item name="android:textSize">9pt</item>
+    </style>
+
+</resources>

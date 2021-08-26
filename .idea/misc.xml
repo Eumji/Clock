@@ -8,9 +8,12 @@
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/drawable/alarm_switch_off.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/drawable/alarm_switch_on.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/drawable/border.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/drawable/border_popup.xml" value="0.2564814814814815" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/drawable/ic_launcher_background.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_create_page.xml" value="0.1" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_item.xml" value="0.2046875" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_menu.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_page.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_switch.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_switch_thumb.xml" value="0.36614583333333334" />
@@ -24,6 +27,7 @@
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/globaltime_page.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/stopwatch_page.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/timer_page.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/menu/alarm_menu.xml" value="0.25925925925925924" />
       </map>
     </option>
   </component>
