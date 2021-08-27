@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Clock</string>
+    <string name="holiday">공휴일엔 알람 끄기</string>
 </resources>
