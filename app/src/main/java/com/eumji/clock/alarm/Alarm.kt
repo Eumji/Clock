@@ -46,7 +46,7 @@ class Alarm : Fragment(), View.OnClickListener {
         appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener{_, verticalOffset ->
             appBarLayout.post{
                 try{
-                    if(abs(verticalOffset)>= appBarLayout.totalScrollRange){
+                    if(abs(verticalOffset) >= appBarLayout.totalScrollRange){
                         alarmAppBarTitle.text="알람"
                     }
                     else{
