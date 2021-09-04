@@ -13,15 +13,15 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var transaction = supportFragmentManager.beginTransaction()
+        val transaction = supportFragmentManager.beginTransaction()
         setContentView(R.layout.activity_main)
         transaction.add(R.id.page_view, Alarm())
         transaction.commit()
 
-        var buttonAlarm = findViewById<Button>(R.id.button_alarm)
-        var buttonGlobaltime = findViewById<Button>(R.id.button_globaltime)
-        var buttonStopwatch = findViewById<Button>(R.id.button_stopwatch)
-        var buttonTimer = findViewById<Button>(R.id.button_timer)
+        val buttonAlarm = findViewById<Button>(R.id.button_alarm)
+        val buttonGlobaltime = findViewById<Button>(R.id.button_globaltime)
+        val buttonStopwatch = findViewById<Button>(R.id.button_stopwatch)
+        val buttonTimer = findViewById<Button>(R.id.button_timer)
 
         buttonAlarm.setOnClickListener(this)
         buttonGlobaltime.setOnClickListener(this)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
     override fun onClick(v: View) {
         val transaction = supportFragmentManager.beginTransaction()
         when (v.id) {
-            R.id.button_alarm->{
+            R.id.button_alarm -> {
                 transaction.replace(R.id.page_view,Alarm())
                 transaction.addToBackStack(null)
                 transaction.commit()
@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
                 transaction.addToBackStack(null)
                 transaction.commit()
             }
-
         }
     }
 }

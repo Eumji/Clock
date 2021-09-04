@@ -32,7 +32,7 @@
                     android:gravity="center_horizontal"
                     android:text="8시간 27분 후에 알람이 울립니다"
                     android:textColor="@color/font"
-                    android:textSize="17pt" />
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/alarm_next_date"
@@ -41,7 +41,7 @@
                     android:gravity="center_horizontal"
                     android:text="8월 23일 (월) 오전 6:30"
                     android:textColor="@color/font2"
-                    android:textSize="8pt" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <androidx.appcompat.widget.Toolbar
@@ -69,7 +69,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10pt"
+                android:textSize="20sp"
                 android:text=" "
                 android:textColor="@color/font"
                 android:layout_marginHorizontal="20dp"

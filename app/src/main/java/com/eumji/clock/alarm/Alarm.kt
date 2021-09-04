@@ -28,7 +28,6 @@ class Alarm : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_alarm, container, false)
         return inflater.inflate(R.layout.fragment_alarm, container, false)
     }
 
@@ -71,7 +70,7 @@ class Alarm : Fragment(), View.OnClickListener {
     override fun onClick(v: View){
         when (v.id) {
             R.id.alarm_appbar_plus->{
-                var intent= Intent(activity, AlarmCreate::class.java)
+                val intent= Intent(activity, AlarmCreate::class.java)
                 startActivity(intent)
             }
             R.id.alarm_appbar_menu->{
