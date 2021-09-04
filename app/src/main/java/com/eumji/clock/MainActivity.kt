@@ -2,22 +2,56 @@ package com.eumji.clock
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import android.view.View
+import android.widget.Button
+import com.eumji.clock.alarm.Alarm
+import com.eumji.clock.globaltimes.Globaltimes
+import com.eumji.clock.stopwatch.Stopwatch
+import com.eumji.clock.timer.Timer
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() ,View.OnClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val transaction = supportFragmentManager.beginTransaction()
         setContentView(R.layout.activity_main)
-        val list = ArrayList<AlarmItem>()
+        transaction.add(R.id.page_view, Alarm())
+        transaction.commit()
 
-        list.add(AlarmItem(1))
-        list.add(AlarmItem(2))
-        list.add(AlarmItem(3))
-        list.add(AlarmItem(4))
-        list.add(AlarmItem(5))
-        list.add(AlarmItem(6))
-        alarm_recyclerview.adapter = AlarmRecyclerAdapter(list)
-        alarm_recyclerview.addItemDecoration(VerticalItemDecorator(20))
+        val buttonAlarm = findViewById<Button>(R.id.button_alarm)
+        val buttonGlobaltime = findViewById<Button>(R.id.button_globaltime)
+        val buttonStopwatch = findViewById<Button>(R.id.button_stopwatch)
+        val buttonTimer = findViewById<Button>(R.id.button_timer)
+
+        buttonAlarm.setOnClickListener(this)
+        buttonGlobaltime.setOnClickListener(this)
+        buttonStopwatch.setOnClickListener(this)
+        buttonTimer.setOnClickListener(this)
     }
 
+    override fun onClick(v: View) {
+        val transaction = supportFragmentManager.beginTransaction()
+        when (v.id) {
+            R.id.button_alarm -> {
+                transaction.replace(R.id.page_view,Alarm())
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
+            R.id.button_globaltime -> {
+                transaction.replace(R.id.page_view,Globaltimes())
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
+            R.id.button_stopwatch -> {
+                transaction.replace(R.id.page_view,Stopwatch())
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
+            R.id.button_timer -> {
+                transaction.replace(R.id.page_view,Timer())
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
+        }
+    }
 }

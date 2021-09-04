@@ -7,6 +7,20 @@
     android:orientation="vertical"
     android:background="@drawable/border">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/alarm_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="알람내용"
+        android:textColor="@color/font3"
+        android:textSize="@string/alarm_text_size"
+        android:layout_weight="1" />
+
     <TextView
         android:id="@+id/alarm_item_holiday"
         android:layout_width="match_parent"
@@ -14,8 +28,9 @@
         android:text="@string/holiday"
         android:gravity="end"
         android:textColor="@color/font3"
-        android:textSize="6pt"
-        android:layout_weight="1"/>
+        android:textSize="@string/alarm_text_size"
+        android:layout_weight="1" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,12 +40,12 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/alarm_item_AMPM"
+            android:id="@+id/alarm_item_convert_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" 오전 "
             android:textColor="@color/font3"
-            android:textSize="10pt" />
+            android:textSize="@string/alarm_text_size" />
 
         <TextView
             android:id="@+id/alarm_item_time"
@@ -38,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="1:00"
             android:textColor="@color/font3"
-            android:textSize="15pt" />
+            android:textSize="@string/alarm_big_text_size" />
 
         <View
             android:layout_width="0dp"
@@ -51,7 +66,7 @@
             android:layout_height="wrap_content"
             android:text="8월 23일 (월)"
             android:textColor="@color/font3"
-            android:textSize="6pt" />
+            android:textSize="@string/alarm_text_size" />
 
 
         <LinearLayout
@@ -67,49 +82,49 @@
                 android:layout_height="wrap_content"
                 android:text="일"
                 android:textColor="@color/font3"
-                android:textSize="6pt" />
+                android:textSize="@string/alarm_text_size" />
             <TextView
                 android:id="@+id/alarm_item_mon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="월"
                 android:textColor="@color/font3"
-                android:textSize="6pt" />
+                android:textSize="@string/alarm_text_size" />
             <TextView
                 android:id="@+id/alarm_item_tue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="화"
                 android:textColor="@color/font3"
-                android:textSize="6pt" />
+                android:textSize="@string/alarm_text_size" />
             <TextView
-                android:id="@+id/alarm_item_wen"
+                android:id="@+id/alarm_item_wed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="수"
                 android:textColor="@color/font3"
-                android:textSize="6pt" />
+                android:textSize="@string/alarm_text_size" />
             <TextView
                 android:id="@+id/alarm_item_thu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="목"
                 android:textColor="@color/font3"
-                android:textSize="6pt" />
+                android:textSize="@string/alarm_text_size" />
             <TextView
                 android:id="@+id/alarm_item_fri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="금"
                 android:textColor="@color/font3"
-                android:textSize="6pt" />
+                android:textSize="@string/alarm_text_size" />
             <TextView
                 android:id="@+id/alarm_item_sat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="토"
                 android:textColor="@color/font3"
-                android:textSize="6pt" />
+                android:textSize="@string/alarm_text_size" />
         </LinearLayout>
 
         <androidx.appcompat.widget.SwitchCompat

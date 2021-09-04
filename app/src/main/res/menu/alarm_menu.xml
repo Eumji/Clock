@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/alarm_menu_sleep_setting"
+        android:title="취침 시간 설정"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/alarm_menu_edit"
+        android:title="편집"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/alarm_menu_sort"
+        android:title="정렬"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/alarm_menu_setting"
+        android:title="설정"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/alarm_menu_question"
+        android:title="문의하기"
+        app:showAsAction="never"/>
+</menu>
