@@ -110,13 +110,4 @@ class Alarm : Fragment(), View.OnClickListener {
             return@setOnMenuItemClickListener false
         }
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Alarm().apply {
-                arguments = Bundle().apply {
-                }
-            }
-    }
 }

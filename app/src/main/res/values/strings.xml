@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Clock</string>
     <string name="holiday">공휴일엔 알람 끄기</string>
-    <string name="button_text_size">15sp</string>
-    <string name="alarm_small_text_size">10sp</string>
-    <string name="alarm_text_size">15sp</string>
-    <string name="alarm_big_text_size">20sp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
