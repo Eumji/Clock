@@ -34,22 +34,18 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
         when (v.id) {
             R.id.button_alarm -> {
                 transaction.replace(R.id.page_view,Alarm())
-                transaction.addToBackStack(null)
                 transaction.commit()
             }
             R.id.button_globaltime -> {
                 transaction.replace(R.id.page_view,Globaltimes())
-                transaction.addToBackStack(null)
                 transaction.commit()
             }
             R.id.button_stopwatch -> {
                 transaction.replace(R.id.page_view,Stopwatch())
-                transaction.addToBackStack(null)
                 transaction.commit()
             }
             R.id.button_timer -> {
                 transaction.replace(R.id.page_view,Timer())
-                transaction.addToBackStack(null)
                 transaction.commit()
             }
         }

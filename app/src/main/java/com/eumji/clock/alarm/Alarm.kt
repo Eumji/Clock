@@ -13,7 +13,7 @@ import com.eumji.clock.R
 import com.eumji.clock.VerticalItemDecorator
 import com.google.android.material.appbar.AppBarLayout
 import java.lang.IllegalStateException
-import java.lang.Math.abs
+import kotlin.math.abs
 
 class Alarm : Fragment(), View.OnClickListener {
     private lateinit var alarmRecyclerView: RecyclerView
@@ -59,7 +59,7 @@ class Alarm : Fragment(), View.OnClickListener {
 
         val list = ArrayList<AlarmItem>()
         for(i in 1..13){
-            list.add(AlarmItem(i))
+            list.add(AlarmItem())
         }
 
         alarmRecyclerView = view.findViewById(R.id.alarm_recyclerview)
@@ -70,7 +70,7 @@ class Alarm : Fragment(), View.OnClickListener {
     override fun onClick(v: View){
         when (v.id) {
             R.id.alarm_appbar_plus->{
-                val intent= Intent(activity, AlarmCreate::class.java)
+                val intent= Intent(activity, AlarmDetail::class.java)
                 startActivity(intent)
             }
             R.id.alarm_appbar_menu->{

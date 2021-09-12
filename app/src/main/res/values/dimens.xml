@@ -4,8 +4,8 @@
     <dimen name="alarm_small_text_size">10sp</dimen>
     <dimen name="alarm_text_size">12sp</dimen>
     <dimen name="alarm_big_text_size">30sp</dimen>
-    <dimen name="alarm_create_small_text_size">11sp</dimen>
-    <dimen name="alarm_create_text_size">18sp</dimen>
-    <dimen name="alarm_create_big_text_size">30sp</dimen>
+    <dimen name="alarm_detail_small_text_size">11sp</dimen>
+    <dimen name="alarm_detail_text_size">18sp</dimen>
+    <dimen name="alarm_detail_big_text_size">30sp</dimen>
 
 </resources>

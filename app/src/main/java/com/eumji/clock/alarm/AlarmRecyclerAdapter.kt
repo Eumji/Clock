@@ -1,9 +1,10 @@
-package com.eumji.clock.alarm;
+package com.eumji.clock.alarm
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.eumji.clock.R
 import java.util.ArrayList
@@ -18,8 +19,9 @@ class AlarmRecyclerAdapter(private val items: ArrayList<AlarmItem>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val listener = View.OnClickListener { it ->
-            Toast.makeText(it.context, items[position].time.toString(), Toast.LENGTH_SHORT).show()
+        val listener = View.OnClickListener { _ ->
+            val intent= Intent(holder.itemView.context, AlarmDetail::class.java)
+            ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
         holder.bind(listener, items[position])
     }

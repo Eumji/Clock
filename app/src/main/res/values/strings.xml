@@ -2,4 +2,5 @@
     <string name="app_name">Clock</string>
     <string name="holiday">공휴일엔 알람 끄기</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detail_setting_holiday_body">대체 공휴일이나 임시 공휴일 포함 안 함</string>
 </resources>

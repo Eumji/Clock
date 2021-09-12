@@ -10,18 +10,30 @@
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/drawable/border.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/drawable/ic_launcher_background.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_create_day_item.xml" value="0.1" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_create_item.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_create_page.xml" value="0.1" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_day_item.xml" value="0.1" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_detail_day_item.xml" value="0.33" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_detail_holiday.xml" value="0.12639311043566362" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_detail_item.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_detail_page.xml" value="0.25" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_detail_setting.xml" value="0.25" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_detail_sound.xml" value="0.12639311043566362" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_holiday.xml" value="0.25" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_item.xml" value="0.2046875" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_repeat.xml" value="0.12639311043566362" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_sound.xml" value="0.12639311043566362" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_switch.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_switch_thumb.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_text_item.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarm_vibration.xml" value="0.12639311043566362" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/alarmitem.xml" value="0.3338541666666667" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/Clock/app/src/main/res/layout/border.xml" value="0.3338541666666667" />
-        <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/drawable/border.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/activity_main.xml" value="0.3536458333333333" />
-        <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/alarm_create_content.xml" value="0.20104166666666667" />
-        <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/alarm_create_page.xml" value="0.33" />
+        <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/alarm_create_page.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/alarm_item.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/fragment_alarm.xml" value="0.33" />
-        <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/fragment_date_picker_fagment.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/jhobo/StudioProjects/Clock/app/src/main/res/layout/fragment_stopwatch.xml" value="0.1" />
       </map>
     </option>
