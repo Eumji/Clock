@@ -5,5 +5,7 @@
         <item name="colorPrimaryDark">@color/grey</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/font</item>
+        <item name="android:textSize">15sp</item>
     </style>
 </resources>

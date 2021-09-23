@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:background="@color/grey"
+        android:orientation="horizontal">
+
+        <TimePicker
+            android:id="@+id/alarm_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_marginTop="50dp"
+            android:timePickerMode="spinner"
+            tools:ignore="MissingConstraints"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/alarm_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="알람 내용"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/alarm_date_picker"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/calendar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <include layout="@layout/alarm_detail_day_item"
+                    android:id="@+id/detail_sun" />
+                <include layout="@layout/alarm_detail_day_item"
+                    android:id="@+id/detail_mon" />
+                <include layout="@layout/alarm_detail_day_item"
+                    android:id="@+id/detail_tue" />
+                <include layout="@layout/alarm_detail_day_item"
+                    android:id="@+id/detail_wed" />
+                <include layout="@layout/alarm_detail_day_item"
+                    android:id="@+id/detail_thu" />
+                <include layout="@layout/alarm_detail_day_item"
+                    android:id="@+id/detail_fri" />
+                <include layout="@layout/alarm_detail_day_item"
+                    android:id="@+id/detail_sat" />
+
+            </LinearLayout>
+
+            <include layout="@layout/alarm_detail_item"
+                android:id="@+id/alarm_detail_holiday"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="@dimen/alarm_detail_text_size"
+                android:hint="알람 이름"/>
+
+            <include layout="@layout/alarm_detail_item"
+                android:id="@+id/alarm_detail_sound"/>
+
+            <include layout="@layout/alarm_detail_item"
+                android:id="@+id/alarm_detail_vibration"/>
+
+            <include layout="@layout/alarm_detail_item"
+                android:id="@+id/alarm_detail_repeat"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="취소"
+            android:textColor="@color/font"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="저장"
+            android:textColor="@color/font"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>

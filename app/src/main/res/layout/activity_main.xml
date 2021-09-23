@@ -27,17 +27,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="알람"
-            android:textSize="@string/button_text_size"
+            android:textSize="@dimen/button_text_size"
             android:background="@color/transparent"
             android:textColor="@color/font2"/>
 
         <Button
-            android:id="@+id/button_globaltime"
+            android:id="@+id/button_global_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="세계시각"
-            android:textSize="@string/button_text_size"
+            android:textSize="@dimen/button_text_size"
             android:background="@color/transparent"
             android:textColor="@color/font2"/>
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="스톱워치"
-            android:textSize="@string/button_text_size"
+            android:textSize="@dimen/button_text_size"
             android:background="@color/transparent"
             android:textColor="@color/font2"/>
 
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="타이머"
-            android:textSize="@string/button_text_size"
+            android:textSize="@dimen/button_text_size"
             android:background="@color/transparent"
             android:textColor="@color/font2"/>
     </LinearLayout>
