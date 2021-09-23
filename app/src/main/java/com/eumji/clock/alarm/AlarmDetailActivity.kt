@@ -13,7 +13,7 @@ import com.eumji.clock.R
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AlarmDetail : AppCompatActivity(), View.OnClickListener {
+class AlarmDetailActivity : AppCompatActivity(), View.OnClickListener {
     private val cal: Calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +29,9 @@ class AlarmDetail : AppCompatActivity(), View.OnClickListener {
             }
 
         val alarmDatePicker = findViewById<ImageButton>(R.id.alarm_date_picker)
-        alarmDatePicker!!.setOnClickListener {
+        alarmDatePicker.setOnClickListener {
             DatePickerDialog(
-                this@AlarmDetail,
+                this@AlarmDetailActivity,
                 dateSetListener,
                 cal.get(Calendar.YEAR),
                 cal.get(Calendar.MONTH),
@@ -47,7 +47,7 @@ class AlarmDetail : AppCompatActivity(), View.OnClickListener {
         val alarmTitle = findViewById<TextView>(R.id.alarm_detail_title)
         val mDateFormat = "yyyy.MM.dd"
         val sdf = SimpleDateFormat(mDateFormat, Locale.KOREA)
-        alarmTitle!!.text = sdf.format(cal.getTime())
+        alarmTitle!!.text = sdf.format(cal.time)
     }
 
     private fun setDayItemListener(){
@@ -59,13 +59,13 @@ class AlarmDetail : AppCompatActivity(), View.OnClickListener {
         val fri = findViewById<TextView>(R.id.detail_fri)
         val sat = findViewById<TextView>(R.id.detail_sat)
 
-        sun.setOnDayClickListener("일")
-        mon.setOnDayClickListener("월")
-        tue.setOnDayClickListener("화")
-        wed.setOnDayClickListener("수")
-        thu.setOnDayClickListener("목")
-        fri.setOnDayClickListener("금")
-        sat.setOnDayClickListener("토")
+        sun.addClickListener("일")
+        mon.addClickListener("월")
+        tue.addClickListener("화")
+        wed.addClickListener("수")
+        thu.addClickListener("목")
+        fri.addClickListener("금")
+        sat.addClickListener("토")
     }
 
     private fun setSettingItemListener(){
@@ -89,18 +89,10 @@ class AlarmDetail : AppCompatActivity(), View.OnClickListener {
         val titleText = this.findViewById<TextView>(R.id.detail_item_title)
         val bodyText = this.findViewById<TextView>(R.id.detail_item_body)
         when(title){
-            "holiday"->{
-                titleText.text="공휴일엔 알람 끄기"
-            }
-            "sound"->{
-                titleText.text="알람음"
-            }
-            "vibration"->{
-                titleText.text="진동"
-            }
-            "repeat"->{
-                titleText.text="다시 울림"
-            }
+            "holiday"->titleText.text="공휴일엔 알람 끄기"
+            "sound"->titleText.text="알람음"
+            "vibration"->titleText.text="진동"
+            "repeat"->titleText.text="다시 울림"
         }
         bodyText.text=body
     }
@@ -108,41 +100,39 @@ class AlarmDetail : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View){
         when (v.id) {
             R.id.alarm_detail_holiday->{
-                val intent= Intent(this, AlarmDetailSetting::class.java)
-                intent.putExtra("title", "holiday")
+                val intent = Intent(this, AlarmDetailSettingActivity::class.java).apply{
+                    putExtra("title", "holiday")
+                }
                 startActivity(intent)
             }
             R.id.alarm_detail_sound->{
-                val intent= Intent(this, AlarmDetailSetting::class.java)
-                intent.putExtra("title", "sound")
+                val intent = Intent(this, AlarmDetailSettingActivity::class.java).apply{
+                    putExtra("title", "sound")
+                }
                 startActivity(intent)
             }
             R.id.alarm_detail_vibration->{
-                val intent= Intent(this, AlarmDetailSetting::class.java)
-                intent.putExtra("title", "vibration")
+                val intent = Intent(this, AlarmDetailSettingActivity::class.java).apply{
+                    putExtra("title", "vibration")
+                }
                 startActivity(intent)
             }
             R.id.alarm_detail_repeat->{
-                val intent= Intent(this, AlarmDetailSetting::class.java)
-                intent.putExtra("title", "repeat")
+                val intent = Intent(this, AlarmDetailSettingActivity::class.java).apply{
+                    putExtra("title", "repeat")
+                }
                 startActivity(intent)
             }
         }
     }
 
-    private fun TextView.setOnDayClickListener(day : String){
+    private fun TextView.addClickListener(day : String){
         this.text=day
         var isClicked = false
 
         this.setOnClickListener{
-            if(isClicked){
-                isClicked=false
-                this.background=null
-            }
-            else{
-                isClicked=true
-                this.background= ContextCompat.getDrawable(this.context, R.drawable.circle)
-            }
+            isClicked = !isClicked
+            this.background = if(isClicked) ContextCompat.getDrawable(this.context, R.drawable.circle) else null
         }
     }
 }
