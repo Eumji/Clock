@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_text_size">15sp</dimen>
-    <dimen name="alarm_small_text_size">10sp</dimen>
-    <dimen name="alarm_text_size">12sp</dimen>
-    <dimen name="alarm_big_text_size">30sp</dimen>
+    <dimen name="alarm_small_text_size">12sp</dimen>
+    <dimen name="alarm_text_size">14sp</dimen>
+    <dimen name="alarm_big_text_size">31sp</dimen>
     <dimen name="alarm_detail_small_text_size">11sp</dimen>
     <dimen name="alarm_detail_text_size">18sp</dimen>
     <dimen name="alarm_detail_big_text_size">30sp</dimen>

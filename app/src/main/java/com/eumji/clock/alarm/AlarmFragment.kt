@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.eumji.clock.R
 import com.eumji.clock.VerticalItemDecorator
+import com.eumji.clock.data.Alarm
 import com.google.android.material.appbar.AppBarLayout
 import java.lang.IllegalStateException
 import kotlin.math.abs
@@ -58,8 +59,41 @@ class AlarmFragment : Fragment(), View.OnClickListener {
         })
 
         val list = ArrayList<Alarm>()
-        for(i in 1..13){
-            list.add(Alarm())
+        for(i in 1..5){
+            list.add(Alarm(
+                title="출근",
+                holiday = true,
+                convertTime = true,
+                time = "6:20",
+                date = "",
+                day = booleanArrayOf(false, true, true, true, true, true, false),
+                everyDay = false,
+                switch = true
+            ))
+        }
+        for(i in 1..8){
+            list.add(Alarm(
+                title="결제",
+                holiday = false,
+                convertTime = false,
+                time = "11:58",
+                date = "9월 28일 (화)",
+                day = booleanArrayOf(),
+                everyDay = false,
+                switch = true
+            ))
+        }
+        for(i in 1..3){
+            list.add(Alarm(
+                title="영어 단어",
+                holiday = false,
+                convertTime = true,
+                time = "10:00",
+                date = "",
+                day = booleanArrayOf(),
+                everyDay = true,
+                switch = false
+            ))
         }
 
         alarmRecyclerView = view.findViewById(R.id.alarm_recyclerview)
