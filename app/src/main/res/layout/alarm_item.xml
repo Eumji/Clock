@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="10dp"
-    android:paddingVertical="10dp"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="20dp"
     android:orientation="vertical"
     android:background="@drawable/border">
 
@@ -12,24 +12,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/alarm_item_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="알람내용"
-        android:textColor="@color/font3"
-        android:textSize="@dimen/alarm_text_size"
-        android:layout_weight="1" />
+        <TextView
+            android:id="@+id/alarm_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="알람내용"
+            android:textColor="@color/font3"
+            android:textSize="@dimen/alarm_text_size"
+            android:layout_weight="1" />
 
-    <TextView
-        android:id="@+id/alarm_item_holiday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/holiday"
-        android:gravity="end"
-        android:textColor="@color/font3"
-        android:textSize="@dimen/alarm_text_size"
-        android:layout_weight="1" />
+        <TextView
+            android:id="@+id/alarm_item_holiday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/holiday"
+            android:gravity="end"
+            android:textColor="@color/font3"
+            android:textSize="@dimen/alarm_text_size"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,7 +45,8 @@
             android:layout_height="wrap_content"
             android:text=" 오전 "
             android:textColor="@color/font3"
-            android:textSize="@dimen/alarm_text_size" />
+            android:textSize="@dimen/alarm_text_size"
+            android:layout_marginEnd="10dp"/>
 
         <TextView
             android:id="@+id/alarm_item_time"
@@ -66,30 +67,47 @@
             android:layout_height="wrap_content"
             android:text="8월 23일 (월)"
             android:textColor="@color/font3"
-            android:textSize="@dimen/alarm_text_size" />
-
+            android:textSize="@dimen/alarm_text_size"
+            android:visibility="gone"
+            android:layout_gravity="center" />
 
         <LinearLayout
             android:id="@+id/alarm_item_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:visibility="gone">
+            android:textSize="@dimen/alarm_text_size"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:textStyle="bold">
 
-            <include layout="@layout/alarm_day_item"
-                android:id="@+id/alarm_sun" />
-            <include layout="@layout/alarm_day_item"
-                android:id="@+id/alarm_mon" />
-            <include layout="@layout/alarm_day_item"
-                android:id="@+id/alarm_tue" />
-            <include layout="@layout/alarm_day_item"
-                android:id="@+id/alarm_wed" />
-            <include layout="@layout/alarm_day_item"
-                android:id="@+id/alarm_thu" />
-            <include layout="@layout/alarm_day_item"
-                android:id="@+id/alarm_fri" />
-            <include layout="@layout/alarm_day_item"
-                android:id="@+id/alarm_sat" />
+            <include
+                android:id="@+id/alarm_sun"
+                layout="@layout/alarm_day_item" />
+
+            <include
+                android:id="@+id/alarm_mon"
+                layout="@layout/alarm_day_item" />
+
+            <include
+                android:id="@+id/alarm_tue"
+                layout="@layout/alarm_day_item" />
+
+            <include
+                android:id="@+id/alarm_wed"
+                layout="@layout/alarm_day_item" />
+
+            <include
+                android:id="@+id/alarm_thu"
+                layout="@layout/alarm_day_item" />
+
+            <include
+                android:id="@+id/alarm_fri"
+                layout="@layout/alarm_day_item" />
+
+            <include
+                android:id="@+id/alarm_sat"
+                layout="@layout/alarm_day_item" />
         </LinearLayout>
 
         <androidx.appcompat.widget.SwitchCompat

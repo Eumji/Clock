@@ -4,4 +4,5 @@
     android:layout_height="wrap_content"
     android:text="요일"
     android:textColor="@color/font3"
-    android:textSize="@dimen/alarm_text_size" />
+    android:textSize="@dimen/alarm_text_size"
+    android:paddingHorizontal="2dp"/>
